@@ -40,8 +40,7 @@ Once built, the lab supports hands-on practice in:
 ## 🏗️ Lab Architecture
 
 ```
-<img width="548" height="252" alt="image" src="https://github.com/user-attachments/assets/b856d4de-6000-4d50-aff2-4ba3b3daa31b" />
-
+![perma link](https://github.com/awanlaiba/CYBERSECURITY-LAB-SETUP/blob/1d425bd643f8635646ca211e803fa1f8eb5c587a/Network%20Architecture.png)
 ```
 
 ## ⚙️ Configuration Summary
