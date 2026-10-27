@@ -61,8 +61,6 @@ Once built, the lab supports hands-on practice in:
 | DNS server | 8.8.8.8 |
 | Reserved range for future VMs | 10.0.0.3 – 10.0.0.99 |
 
-*(Edit these values if your own machine or versions differ.)*
-
 ---
 
 ## 🪜 Setup Walkthrough
@@ -89,7 +87,7 @@ Once built, the lab supports hands-on practice in:
 
 ### Step 4: Import Kali Linux
 
-**What I did:** Downloaded the official Kali VirtualBox image, and imported it into VirtualBox. Then I adjusted the VM:
+**What I did:** Downloaded the official Kali VirtualBox image, import it into VirtualBox and then adjust the VM:
 
 ```
 Adapter 1
