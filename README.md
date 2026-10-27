@@ -37,15 +37,13 @@ Once built, the lab supports hands-on practice in:
 
 ---
 
-## 🏗️ Lab Architecture
+## 🖥️ Lab Architecture
 
-```
-![perma link](https://github.com/awanlaiba/CYBERSECURITY-LAB-SETUP/blob/1d425bd643f8635646ca211e803fa1f8eb5c587a/Network%20Architecture.png)
-```
+![Lab diagram](https://github.com/awanlaiba/CYBERSECURITY-LAB-SETUP/blob/main/Network%20Architecture.png?raw=true)
 
 ## ⚙️ Configuration Summary
 
-| Item | Value |
+| Component | Config |
 |---|---|
 | Host operating system | Windows 11 |
 | Host RAM | 32 GB |
@@ -80,7 +78,7 @@ Once built, the lab supports hands-on practice in:
 | DHCP | Enabled |
 | IPv6 | Disabled |
 
-📷 `<img width="959" height="566" alt="image" src="https://github.com/user-attachments/assets/c6b586f9-a00a-4611-bd23-beb28c46773b" />`
+![NAT Network](https://github.com/awanlaiba/CYBERSECURITY-LAB-SETUP/blob/main/NAT%20Network.png?raw=true)
 
 **Why:** A plain "NAT" adapter isolates each VM from the others, so VMs can reach the internet but not each other. A **NAT Network** puts multiple VMs on the same private subnet so they can talk to one another and still reach the internet through the host. That is exactly what an attacker-and-target lab needs.
 
@@ -94,14 +92,13 @@ Adapter 1
   Name        : NatNetwork
   Memory        : 8192 MB
 ```
-📷 `<img width="959" height="521" alt="image" src="https://github.com/user-attachments/assets/5e7550b7-a7fa-4c31-93af-ddfa9bfe6d39" />`
+![Kali](https://github.com/awanlaiba/CYBERSECURITY-LAB-SETUP/blob/main/Kali%20Linux.png?raw=true)
 
 **Why:** Attaching the adapter to the NAT Network places Kali inside the lab's private subnet. 
 
 I also set up a shared folder so I can move files between Windows and the Kali VM.
 
-📷 `<img width="581" height="382" alt="image" src="https://github.com/user-attachments/assets/cf13408e-0ec6-46b1-81d7-9eef49b00b44" />
-`
+![Shared Folder](https://github.com/awanlaiba/CYBERSECURITY-LAB-SETUP/blob/main/Shared%20Folder.png?raw=true)
 
 ### Step 5: Configure Kali's Network
 
@@ -114,8 +111,7 @@ Gateway     : 10.0.0.1
 DNS         : 8.8.8.8
 ```
 
-📷 `<img width="350" height="273" alt="image" src="https://github.com/user-attachments/assets/6650a124-d991-4af1-9a80-1066b613aadd" />
-`
+![kali ipv4 setting](https://github.com/awanlaiba/CYBERSECURITY-LAB-SETUP/blob/main/Kali%20Network%20Settings.png?raw=true)
 
 **Why:** A static address means Kali is always found at the same place. That makes lab notes, scan commands, and future exercises consistent, and DHCP can't shuffle the address between reboots.
 
@@ -138,10 +134,10 @@ DNS         : 8.8.8.8
 | 🧰 Nmap installed | `nmap --version` | Version information shown |
 | 🔄 Snapshot restores | Restore snapshot, then `ip a` | Baseline configuration returns |
 
-📷 `![ip a output](<img width="332" height="264" alt="image" src="https://github.com/user-attachments/assets/9847c54f-fd54-4baf-b830-048191ebdf0d" />)`
-📷 `![ping 10.0.0.1](<img width="329" height="161" alt="image" src="https://github.com/user-attachments/assets/de336194-0dc0-42c8-9f1a-0d086d073eac" />)`
-📷 `![nslookup amazon.com](<img width="323" height="139" alt="image" src="https://github.com/user-attachments/assets/ee0b8a28-a7f8-4e69-9d23-6b738f8e7251" />)`
-📷 `![nslookup nmap --version](<img width="324" height="88" alt="image" src="https://github.com/user-attachments/assets/f56b4702-8704-4b6e-8cf8-2245cad958da" />)`
+![ip a output](https://github.com/awanlaiba/CYBERSECURITY-LAB-SETUP/blob/main/ip%20a.png?raw=true)
+![ping 10.0.0.1](https://github.com/awanlaiba/CYBERSECURITY-LAB-SETUP/blob/main/ping.png?raw=true)
+![nslookup amazon.com](https://github.com/awanlaiba/CYBERSECURITY-LAB-SETUP/blob/main/nslookup.png?raw=true)
+![nslookup nmap --version](https://github.com/awanlaiba/CYBERSECURITY-LAB-SETUP/blob/main/nmap.png?raw=true)
 
 Each test confirms a different layer: addressing, local network, routing out to the internet, name resolution, tooling, and recoverability.
 
